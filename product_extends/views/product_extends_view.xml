@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	
+    <data>
+        	
+		<!-- Vista que hereda de product_template -->
+            
+        <record id="product_template_form_view_inherit" model="ir.ui.view">
+			<field name="name">product_template.form.inherit</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view"/>
+			<field name="arch" type="xml">
+										
+					<page string="Sales" position="after">
+					
+						<page string="Características" groups="base.group_user">
+							<group colspan="4">
+								<group><field name="tipo"/></group>
+								<group><field name="create_date"/></group>
+								<group><field name="prod_padre"/></group>
+							</group>
+							<separator string="Ubicaciones de almacenamiento"/>
+							<field name="loc"/>
+							<separator string="Productos compatibles"/>
+							<field name="equival"/>
+						</page>
+					
+					</page>
+					
+												
+			</field>
+			
+		</record>
+		
+		<!-- vista en form -->
+        
+        <record id="product_type_form_view" model="ir.ui.view">
+			
+			<field name="name">product.type.form</field>
+			<field name="model">product.type</field>
+			<field name="arch" type="xml">
+				
+				<form string="Tipo de producto" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Tipos de producto">
+							<group>
+								<field name="name"/>
+								<field name="description"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+				<!-- vista en tree -->
+		
+		<record id="product_type_tree_view" model="ir.ui.view">
+			
+			<field name="name">product.type.tree</field>
+			<field name="model">product.type</field>
+			<field name="arch" type="xml">
+				<tree string="Tipos de producto" version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		<!-- Action window -->
+		
+		<record id="product_type_action" model="ir.actions.act_window">
+            
+            <field name="name">Tipos de producto</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="product_type_action"
+            id="menu_product_type_action"
+            parent="stock.menu_stock_configuration" sequence="6"/>
+		
+		
+		
+		
+		<!-- vista en form -->
+        
+        <record id="product_location_form_view" model="ir.ui.view">
+			
+			<field name="name">product.location.form</field>
+			<field name="model">product.location</field>
+			<field name="arch" type="xml">
+				
+				<form string="Ubicación de almacenamiento" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Ubicación de almacenamiento">
+							<group colspan="4">
+								<group>	
+									<field name="location"/>
+									<field name="loc_est"/>
+								</group>
+								<group>
+									<field name="loc_fil"/>
+									<field name="loc_caj"/>
+								</group>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- vista en tree -->
+		
+		<record id="product_location_tree_view" model="ir.ui.view">
+			
+			<field name="name">product.location.tree</field>
+			<field name="model">product.location</field>
+			<field name="arch" type="xml">
+				<tree string="Ubicación de almacenamiento" version="7.0">
+					<field name="location"/>
+					<field name="loc_est"/>
+					<field name="loc_fil"/>
+					<field name="loc_caj"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		<!-- Action window -->
+		
+		<record id="product_location_action" model="ir.actions.act_window">
+            
+            <field name="name">Ubicaciones de almacenamiento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.location</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="product_location_action"
+            id="menu_product_location_action"
+            parent="stock.menu_stock_configuration" sequence="5"/>
+		
+    </data>
+    
+</openerp>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	
+    <data>
+        	
+		<!-- Vista que hereda de hr_employee -->
+            
+        <record id="hr_employee_form_view_inherit" model="ir.ui.view">
+			<field name="name">hr.employee.form.inherit</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_form"/>
+			<field name="arch" type="xml">
+				
+					<group string="Birth" position="after">
+						<group string="Datos adicionales" colspan="2">
+							<group>
+								<field name="ccss"/>
+								<field name="nip"/>
+								<field name="notes_int"/>
+							</group>
+						</group>
+					</group>
+										
+					<field name="bank_account_id" position = "after">
+						<field name="numcuenta"/>
+					</field>
+					
+					<!-- Ocultamos campo direccion particular -->
+					<field name="address_home_id" position = "attributes">
+						<attribute name = "invisible">1</attribute>
+					</field>
+					
+					<!-- Metemos nuestros campos de direccion -->
+					<field name="address_home_id" position = "after">
+						<label for="street" string="Dirección particular"/>
+						<div>
+							<field name="street" placeholder="Calle..." />
+							<field name="street2" />
+							<div class="address_format">
+								<field name="city" placeholder="Ciudad" style="width: 40%"/>
+								<field name="provincia" class="oe_no_button" placeholder="Provincia" style="width: 37%" options="{&quot;no_open&quot;: True}"/>
+								<field name="cp" placeholder="CP" style="width: 20%"/>
+							</div>
+							<field name="pais" placeholder="Pais" class="oe_no_button" options="{&quot;no_open&quot;: True}"/>
+						</div>
+					</field>
+					 
+					
+					<page string="HR Settings" groups="base.group_hr_user" position="inside">
+						
+						<group string="Horario, categoria prof y más">
+							<group>
+								<field name="many_catprof"/>
+								<field name="many_grupcot"/>
+								<field name="epi_prl"/>
+							</group>
+							<group>
+								<field name="working_hours"/>
+								<field name="working_hours2"/>
+								<field name="localizacion"/>
+								<field name="many_centro"/>
+							</group>
+						</group>
+						
+						
+						
+					</page>
+												
+			</field>
+			
+		</record>
+		
+		<record id="hr_horarios_action" model="ir.actions.act_window">
+            
+            <field name="name">Horarios de trabajo</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">resource.calendar</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+                <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_horarios_action"
+            id="menu_hr_horarios_action"
+            parent="hr.menu_hr_configuration" sequence="2" groups="base.group_hr_manager"/>
+		
+    </data>
+    
+</openerp>

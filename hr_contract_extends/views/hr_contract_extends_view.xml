@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	
+    <data>
+        
+        <!-- Vista de clase zonas -->
+        <!-- vista en form -->
+        
+        <record id="hr_zonas_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.zonas.form</field>
+			<field name="model">hr.zonas</field>
+			<field name="arch" type="xml">
+				
+				<form string="Zonas" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Zonas">
+							<group>
+								<field name="name"/>
+								<field name="description"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_zonas_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.zonas.tree</field>
+			<field name="model">hr.zonas</field>
+			<field name="arch" type="xml">
+				<tree string="Zonas" version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_zonas_action" model="ir.actions.act_window">
+            
+            <field name="name">Zonas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.zonas</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_zonas_action"
+            id="menu_hr_zonas_action"
+            parent="hr.menu_hr_configuration" sequence="6" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase zonas -->
+        
+
+        <!-- Vista de clase regimen_ss -->
+        <!-- vista en form -->
+        
+        <record id="hr_regimen_ss_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.regimen.ss.form</field>
+			<field name="model">hr.regimen.ss</field>
+			<field name="arch" type="xml">
+				
+				<form string="Regimen S.S." version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Régimen de la Seguridad Social">
+							<group>
+								<field name="name"/>
+								<field name="description"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_regimen_ss_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.regimen.ss.tree</field>
+			<field name="model">hr.regimen.ss</field>
+			<field name="arch" type="xml">
+				<tree string="Regimen S.S." version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_regimen_ss_action" model="ir.actions.act_window">
+            
+            <field name="name">Regimenes S.S.</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.regimen.ss</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_regimen_ss_action"
+            id="menu_hr_regimen_ss_action"
+            parent="hr.menu_hr_configuration" sequence="7" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase regimen_ss -->
+
+       
+        <!-- Vista de clase tipo localizacion -->
+        <!-- vista en form -->
+        
+        <record id="hr_tipo_localizacion_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.tipo.localizacion.form</field>
+			<field name="model">hr.tipo.localizacion</field>
+			<field name="arch" type="xml">
+				
+				<form string="Tipo de localizacion" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Tipo de localización">
+							<group>
+								<field name="name"/>
+								<field name="description"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_tipo_localizacion_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.tipo.localizacion.tree</field>
+			<field name="model">hr.tipo.localizacion</field>
+			<field name="arch" type="xml">
+				<tree string="Tipo de localizacion" version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_tipo_localizacion_action" model="ir.actions.act_window">
+            
+            <field name="name">Tipos de localizaciones</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.tipo.localizacion</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_tipo_localizacion_action"
+            id="menu_hr_tipo_localizacion_action"
+            parent="hr.menu_hr_configuration" sequence="5" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase tipo localizacion -->
+        
+       
+       
+        <!-- Vista de clase hr_localizaciones -->
+        <!-- vista en form -->
+        
+        <record id="hr_localizaciones_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.localizaciones.form</field>
+			<field name="model">hr.localizaciones</field>
+			<field name="arch" type="xml">
+				
+				<form string="Localizaciones" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+		<!-- utilizamos 2 attrs invisible y required -->
+					<sheet string="Localizaciones">
+						<div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+								<field name="name"/>
+							</h1>
+						</div>
+							<group>
+								<group>
+									<field name="is_center"/>
+									<!--<field name="convenio" attrs="{'invisible': [('is_center','=',False)],'required': [('is_center','=',True)]}"/>   -->
+									<field name="convenio"/>
+									<field name="contacto"/>
+								</group>
+								<group>
+									<field name="tipo_localizacion"/>
+									<field name="zona"/>
+								</group>
+							</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_localizaciones_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.localizaciones.tree</field>
+			<field name="model">hr.localizaciones</field>
+			<field name="arch" type="xml">
+				<tree string="Localizaciones" version="7.0">
+					<field name="name"/>
+					<field name="is_center"/>
+					<field name="convenio"/>
+					<field name="contacto"/>
+					<field name="tipo_localizacion"/>
+					<field name="zona"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_localizaciones_action" model="ir.actions.act_window">
+            
+            <field name="name">Localizaciones</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.localizaciones</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_localizaciones_action"
+            id="menu_hr_localizaciones_action"
+            parent="hr.menu_hr_configuration" sequence="9" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase hr_localizaciones -->
+       
+
+
+        <!-- Vista de clase  hr_centro_cot -->
+        <!-- vista en form -->
+        
+        <record id="hr_centro_cot_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.centro.cot.form</field>
+			<field name="model">hr.centro.cot</field>
+			<field name="arch" type="xml">
+				
+				<form string="Centros de cotizaciones" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet string="Centros de cotizaciones">
+						<div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+								<field name="name"/>
+							</h1>
+							<group>
+								<field name="activo"/>
+							</group>
+						</div>
+							<group>
+								<group>
+									<field name="cuenta_coti"/>
+									<field name="direccion"/>
+									<field name="regimenss"/>
+								</group>
+								<group>
+									<field name="fecha_creacion"/>
+									<field name="importe_km"/>
+								</group>
+							</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_centro_cot_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.centro.cot.tree</field>
+			<field name="model">hr.centro.cot</field>
+			<field name="arch" type="xml">
+				<tree string="Centros de cotizaciones" version="7.0">
+					<field name="name"/>
+					<field name="activo"/>
+					<field name="cuenta_coti"/>
+					<field name="fecha_creacion"/>
+					<field name="direccion"/>
+					<field name="regimenss"/>
+					<field name="importe_km"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_centro_cot_action" model="ir.actions.act_window">
+            
+            <field name="name">Centros de cotizaciones</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.centro.cot</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_centro_cot_action"
+            id="menu_hr_centro_cot_action"
+            parent="hr.menu_hr_configuration" sequence="0" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase hr_centro_cot -->       
+       
+       
+        
+        
+        
+        <!-- Vista de clase categoria profesional -->
+        <!-- vista en form -->
+        
+        <record id="hr_catprof_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.catprof.form</field>
+			<field name="model">hr.catprof</field>
+			<field name="arch" type="xml">
+				
+				<form string="Categoria profesional" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Categoria profesional">
+							<group>
+								<field name="name"/>
+								<field name="description"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_catprof_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.catprof.tree</field>
+			<field name="model">hr.catprof</field>
+			<field name="arch" type="xml">
+				<tree string="Categoria profesional" version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_catprof_action" model="ir.actions.act_window">
+            
+            <field name="name">Categorias profesionales</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.catprof</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_catprof_action"
+            id="menu_hr_catprof_action"
+            parent="hr.menu_hr_configuration" sequence="1" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase categoria profesional -->
+        
+        
+        
+        <!-- Vista de clase GRUPO COTIZACION -->
+        <!-- vista en form -->
+        
+        <record id="hr_grupcot_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.grupcot.form</field>
+			<field name="model">hr.grupcot</field>
+			<field name="arch" type="xml">
+				
+				<form string="Grupo de cotizacion" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Grupo de cotizacion">
+							<group>
+								<field name="name"/>
+								<field name="description"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_grupcot_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.grupcot.tree</field>
+			<field name="model">hr.grupcot</field>
+			<field name="arch" type="xml">
+				<tree string="Grupo de cotizacion" version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_grupcot_action" model="ir.actions.act_window">
+            
+            <field name="name">Grupos de cotizacion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.grupcot</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_grupcot_action"
+            id="menu_hr_grupcot_action"
+            parent="hr.menu_hr_configuration" sequence="2" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase GRUPO COTIZACION -->
+            
+        
+        
+        <!-- Vista de clase CONVENIO -->
+        <!-- vista en form -->
+        
+        <record id="hr_convenio_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.convenio.form</field>
+			<field name="model">hr.convenio</field>
+			<field name="arch" type="xml">
+				
+				<form string="Convenio" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Convenio">
+							<group>
+								<field name="name"/>
+								<field name="description"/>
+								<field name="date_endconv"/>
+								<field name="provincia"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_convenio_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.convenio.tree</field>
+			<field name="model">hr.convenio</field>
+			<field name="arch" type="xml">
+				<tree string="Convenio" version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+					<field name="date_endconv"/>
+					<field name="provincia"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_convenio_action" model="ir.actions.act_window">
+            
+            <field name="name">Convenios</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.convenio</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_convenio_action"
+            id="menu_hr_convenio_action"
+            parent="hr.menu_hr_configuration" sequence="3" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase CONVENIO -->
+
+        <!-- Vista de clase SUBCONVENIO -->
+        <!-- vista en form -->
+        
+        <record id="hr_subconvenio_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.subconvenio.form</field>
+			<field name="model">hr.subconvenio</field>
+			<field name="arch" type="xml">
+				
+				<form string="SubConvenio" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+													
+						<div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+								<field name="name"/>
+							</h1>
+						</div>
+						<br></br>
+						
+							<group>
+								<group>								
+									<field name="description"/>
+									<field name="fecha_inicio"/>
+									<field name="fecha_fin"/>
+								</group>
+								<group>
+									<field name="dias_permiso"/>
+									<field name="total_horas"/>
+									<field name="convenio"/>
+								</group>
+							</group>
+							<separator string="Salario"/>
+							<br></br>
+							<field name="salario"/>
+						
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_subconvenio_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.subconvenio.tree</field>
+			<field name="model">hr.subconvenio</field>
+			<field name="arch" type="xml">
+				<tree string="Versiones de convenio" version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+					<field name="fecha_inicio"/>
+					<field name="fecha_fin"/>
+					<field name="convenio"/>
+					<field name="dias_permiso"/>
+					<field name="total_horas"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_subconvenio_action" model="ir.actions.act_window">
+            
+            <field name="name">Versiones de Convenio</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.subconvenio</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_subconvenio_action"
+            id="menu_hr_subconvenio_action"
+            parent="hr.menu_hr_configuration" sequence="4" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase SUBCONVENIO -->        
+
+       <!-- Vista de clase SALARIO SUBCONVENIO -->
+        <!-- vista en form -->
+        
+        <record id="hr_salario_subconvenio_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.salario.subconvenio.form</field>
+			<field name="model">hr.salario.subconvenio</field>
+			<field name="arch" type="xml">
+				
+				<form string="Conceptos salariales convenio" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Conceptos salariales convenio">
+							<group>
+								<field name="name"/>
+								<field name="cantidad"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_salario_subconvenio_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.salario.subconvenio.tree</field>
+			<field name="model">hr.salario.subconvenio</field>
+			<field name="arch" type="xml">
+				<tree string="Conceptos salariales convenio" version="7.0">
+					<field name="name"/>
+					<field name="cantidad"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_salario_subconvenio_action" model="ir.actions.act_window">
+            
+            <field name="name">Conceptos salariales convenio</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.salario.subconvenio</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_salario_subconvenio_action"
+            id="menu_hr_salario_subconvenio_action"
+            parent="hr.menu_hr_configuration" sequence="5" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase SUBCONVENIO -->
+
+        
+        
+        <!-- Vista de clase Tipo de jornada -->
+        <!-- vista en form -->
+        
+        <record id="hr_jornada_form_view" model="ir.ui.view">
+			
+			<field name="name">hr.jornada.form</field>
+			<field name="model">hr.jornada</field>
+			<field name="arch" type="xml">
+				
+				<form string="Tipo de jornada" version="7.0">	
+					
+		<!-- sheet surve para crear una hoja y meterlo dentro todo -->
+					<sheet>
+						<group string="Tipo de jornada">
+							<group>
+								<field name="name"/>
+								<field name="description"/>
+							</group>
+						</group>
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="hr_jornada_tree_view" model="ir.ui.view">
+			
+			<field name="name">hr.jornada.tree</field>
+			<field name="model">hr.jornada</field>
+			<field name="arch" type="xml">
+				<tree string="Tipo de jornada" version="7.0">
+					<field name="name"/>
+					<field name="description"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		
+		<!-- Action window -->
+		
+		<record id="hr_jornada_action" model="ir.actions.act_window">
+            
+            <field name="name">Tipos de jornada</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.jornada</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        
+        <menuitem action="hr_jornada_action"
+            id="menu_hr_jornada_action"
+            parent="hr.menu_hr_configuration" sequence="4" groups="base.group_hr_manager"/>
+        
+        <!-- FIN Vista de clase Tipos de jornada -->
+        
+		
+		<!--Heredamos de una vista heredada para ocultar el campo vehicle-->
+		
+		<record id="hr_contract_hr_hr_employee_view_form2_inherit" model="ir.ui.view">
+			<field name="name">hr.contract.hr.hr.employee.view.form2.inherit</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr_contract.hr_hr_employee_view_form2"/>
+			<field name="arch" type="xml">
+				
+				    <!-- Ocultamos campo vehicle -->
+					<field name="vehicle" position = "attributes">
+						<attribute name = "invisible">1</attribute>
+					</field> 
+					
+					<!-- Ocultamos campo bank_account_id -->
+					<field name="bank_account_id" position = "attributes">
+						<attribute name = "invisible">1</attribute>
+					</field>
+												
+			</field>
+			
+		</record>
+        
+        <!-- Vista que muestra en form contract los seis many2one -->
+             
+        <record id="hr_contract_form_view_inherit" model="ir.ui.view">
+			<field name="name">hr.contract.form.inherit</field>
+			<field name="model">hr.contract</field>
+			<field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+			<field name="arch" type="xml">
+				
+					<field name="type_id" position="after">
+						
+						<field name="acti_new"/>
+						
+					</field>
+					<!-- Tras modificacion de antonio
+					
+					<field name="working_hours" position="after">
+						
+						<field name="working_hours2"/>
+					
+					</field>
+					
+					-->
+					
+					<!--
+									  Para añadir atributos a un field que no lleva, en este
+									  caso el atributo invisible, lo ponemos a 1                                                                            
+					-->
+					<field name="working_hours" position = "attributes">
+						<attribute name = "invisible">1</attribute>
+					</field>
+					
+					<field name="job_id" position = "attributes">
+						<attribute name = "invisible">1</attribute>
+					</field>
+
+					
+					<separator string="Notes" position="before">
+						<group>
+							<group>
+								<field name="many_convenio"/>
+								<field name="many_asesoria"/>
+								<field name="id_asesoria"/>
+							</group>
+							<group>
+								<field name="many_jornada"/>
+								<field name="antic"/>
+								<field name="many_centro"/>
+							</group>
+						</group>
+					</separator>	
+					
+					<page string="Work Permit" position="after">
+						<page string="Rescindir">
+							<group>
+								<field name="rescin">Rescindido</field>
+								<field name="rescin_date" attrs="{'invisible': [('rescin', '!=', True)]}">Fecha</field>
+								<field name="rescin_motivo" attrs="{'invisible': [('rescin', '!=', True)]}">Motivo</field>
+							</group>
+						</page>
+					</page>
+												
+			</field>
+			
+		</record>
+		
+		<!-- Vista que muestra en tree contract y los colorea-->
+		
+		<record id="hr_sysman_contract_tree_view" model="ir.ui.view">
+			<field name="name">hr.contract.tree.inherit</field>
+			<field name="model">hr.contract</field>
+			<field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+			<field name="arch" type="xml">
+				
+				<!-- Reemplazamos el tree para meter el campo acti y poder
+				cambiar el color de la linea. Se hace con el atributo colors de 
+				tree y la sintaxis es "color:variable==valor". si es true o false
+				sin comillas, si es un texto a comparar hay que ponerlo entre
+				comillas simples.
+				
+				Curiosidad: si llamas a un campo boolean "active", si lo desmarcas
+				te desaparece del tree    -->
+				
+			<!-- <tree string="Contracts" colors="red:date_end<=context_today();green:acti_new==True"> 
+                    esto no vale por que no se puede poner <= en atributos -->
+            <!-- el color va por orden de prioridad aunque tenga acti_new a true se muestra
+				rojo porque rescin==True va primero-->
+				
+				<tree string="Contracts" position="replace">
+                   <tree string="Contracts" colors="red:acti_new==False;green:acti_new==True"> 
+						<field name="name"/>
+						<field name="employee_id"/>
+						<field name="type_id"/>
+						<field name="job_id" invisible="1"/>
+						<field name="working_hours" invisible="1"/>
+						<field name="date_start"/>
+						<field name="date_end"/>
+						<field name="wage" invisible="1"/>
+						<field name="acti_new" invisible="1"/>
+						<field name="rescin" invisible="1"/>
+						<field name="rescin_date" />
+                    </tree>
+                </tree>
+				
+			<!--	<field name="working_hours" position="after">
+					
+						<field name="working_hours2"/>
+				
+					</field>  -->
+					
+			</field>
+		</record>
+		
+    </data>
+    
+</openerp>

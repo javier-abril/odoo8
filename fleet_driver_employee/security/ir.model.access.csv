@@ -1,0 +1,3 @@
+"id","name","model_id/id","group_id/id","perm_read","perm_write","perm_create","perm_unlink"
+"fleet_driver_employee_model_access_right_user","fleet_driver_employee_model_access_right","model_fleet_driver_employee","group_fleet_driver_employee_user",1,0,0,0
+"fleet_driver_employee_model_access_right_manager","fleet_driver_employee_model_access_right","model_fleet_driver_employee","group_fleet_driver_employee_manager",1,1,1,1

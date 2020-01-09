@@ -1,0 +1,5 @@
+"id","name","model_id/id","group_id/id","perm_read","perm_write","perm_create","perm_unlink"
+product_extends_product_location_user,product_extends_product_location,model_product_location,group_product_extends_user,1,0,0,0
+product_extends_product_location_manager,product_extends_product_location,model_product_location,group_product_extends_manager,1,1,1,1
+product_extends_product_type_user,product_extends_product_type,model_product_type,group_product_extends_user,1,0,0,0
+product_extends_product_type_manager,product_extends_product_type,model_product_type,group_product_extends_manager,1,1,1,1
