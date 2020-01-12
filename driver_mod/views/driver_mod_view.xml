@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	
+    <data>
+        
+        <!-- vista en form -->
+        
+        <record id="driver_mod_form_view" model="ir.ui.view">
+			
+			<field name="name">driver.mod.form</field>
+			<field name="model">driver.mod</field>
+			<field name="arch" type="xml">
+				
+				<form string="Asignar conductor" version="7.0">
+					
+					<header>
+					
+				<!--	<button name="action_confirm" string="Guardar" type="object"/>
+				    	<field name="state" widget="statusbar"/>   -->
+					
+					</header>
+					
+					
+		<!-- sheet surve para crear una hola y meterlo dentro todo -->
+					<sheet>
+										
+								<!-- dentro de group ponemos col= 6 u otro para poner más columnas -->
+									<group>
+										<field name="employee_id"/>
+										<field name="vehicle_id"/>
+										<field name="date_start"/>
+										<field name="date_end"/>
+									</group>
+
+					</sheet>		
+				</form>
+				
+			</field>
+		
+			
+		</record>
+		
+		<!-- vista en tree -->
+		
+		<record id="driver_mod_tree_view" model="ir.ui.view">
+			
+			<field name="name">driver.mod.tree</field>
+			<field name="model">driver.mod</field>
+			<field name="arch" type="xml">
+				<tree string="Asignar conductor">
+					<field name="vehicle_id"/>
+					<field name="employee_id"/>
+					<field name="date_start"/>
+					<field name="date_end"/>
+				</tree>
+			</field>
+		
+			
+		</record>
+		
+		<!-- Action window -->
+		
+		<record id="driver_mod_action" model="ir.actions.act_window">
+            
+            <field name="name">Asignar conductor</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">driver.mod</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        
+        </record>
+        
+        <!-- Para que salga en el menu como padre parent -->
+        <!-- en el menu fleet en posicion 1 -->   
+        
+        <menuitem action="driver_mod_action"
+            id="menu_driver_mod_action"
+            parent="fleet.fleet_vehicles" sequence="1" />
+		
+    </data>
+    
+</openerp>
